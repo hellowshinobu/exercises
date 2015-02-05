@@ -24,8 +24,8 @@ public:
 
     inline Vector3F& operator *= (float factor);
     inline Vector3F& operator /= (float factor);
-    inline const Vector3F  operator * (float factor);
-    inline const Vector3F  operator / (float factor);
+    inline const Vector3F operator * (float factor);
+    inline const Vector3F operator / (float factor);
 
     inline const Vector3F operator - ();
 
@@ -47,13 +47,12 @@ private:
     float e_[3];
 };
 
-inline const Vector3F operator * (const Vector3F& v, float s);
 inline const Vector3F operator * (float s, const Vector3F& v);
 inline std::ostream& operator<< (std::ostream& os, const Vector3F& v);
 inline std::istream& operator>> (std::istream& is, Vector3F& v);
 
 
+#include "vector3f.inl"
 } // Ray tracer
 
-#include "vector3f.inl"
 #endif
